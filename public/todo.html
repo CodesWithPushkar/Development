@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo App</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.todo-container {
+    background: white;
+    width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 10px;
+}
+
+.input-section button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f9fa;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.todo-text {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.status {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #666;
+}
+
+.btn-group button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.edit { background: #ffc107; }
+.delete { background: #dc3545; }
+
+</style>
+</head>
+
+<body>
+
+<div class="todo-container">
+<h2>My Todo List</h2>
+
+<div class="input-section">
+    <input type="text" placeholder="Enter task">
+    <button>Add</button>
+</div>
+
+<ul id="display-todos">
+
+<li>
+    <input type="checkbox">
+    <span class="todo-text">Learn Node.js</span>
+    <span class="status">Incomplete</span>
+
+    <div class="btn-group">
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+    </div>
+</li>
+
+<li>
+    <input type="checkbox" checked>
+    <span class="todo-text completed">Practice DSA</span>
+    <span class="status">Completed</span>
+
+    <div class="btn-group">
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+    </div>
+</li>
+
+</ul>
+</div>
+<script src="todo.js"></script>
+</body>
+</html>
