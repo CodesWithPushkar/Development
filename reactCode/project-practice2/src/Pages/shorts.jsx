@@ -1,0 +1,3 @@
+const ShortsPage = ({se}) => {
+
+}

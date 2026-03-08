@@ -1,8 +1,8 @@
-import AllenLayout from "./Pages/allen";
-import YoutubeLayout from "./Pages/YoutubeVideoPage";
+import Home from "./Pages/home.jsx";
+
 const App = () => {
   return <>
-    <YoutubeLayout />
+    <Home />
   </>
   
 }

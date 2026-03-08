@@ -1,0 +1,121 @@
+import FilterNav from "../components/filterNav";
+import { useState } from "react";
+const categories = [
+    { label: "All" },
+    { label: "Music" },
+    { label: "Data Structures" },
+    { label: "Mixes" },
+    { label: "Podcasts" },
+    { label: "Software Development" },
+    { label: "JavaScript" },
+    { label: "Source code" },
+    { label: "Movie musicals" },
+    { label: "Array" },
+    { label: "Indian pop music" },
+    { label: "T-Series" },
+    { label: "Live" },
+    { label: "Gaming" },
+    { label: "News" },
+    { label: "Sports" },
+    { label: "Learning" },
+    { label: "React" },
+    { label: "Web Development" },
+    { label: "Python" },
+    { label: "Algorithms" },
+    { label: "Artificial Intelligence" },
+    { label: "Machine Learning" },
+    { label: "CSS" },
+    { label: "Node.js" },
+    { label: "Next.js" },
+    { label: "Cloud Computing" },
+    { label: "Cybersecurity" },
+    { label: "UI/UX Design" },
+    { label: "Minecraft" },
+    { label: "Grand Theft Auto" },
+    { label: "Valorant" },
+    { label: "BGMI" },
+    { label: "E-sports" },
+    { label: "Speedruns" },
+    { label: "Action movies" },
+    { label: "Stand-up Comedy" },
+    { label: "Anime" },
+    { label: "Vlogs" },
+    { label: "Movie Reviews" },
+    { label: "Physics" },
+    { label: "Mathematics" },
+    { label: "History" },
+    { label: "Space exploration" },
+    { label: "Biology" },
+    { label: "Chemistry" },
+    { label: "Astronomy" },
+    { label: "Engineering" },
+    { label: "Documentaries" },
+    { label: "Cooking" },
+    { label: "Baking" },
+    { label: "Travel vloggers" },
+    { label: "Fitness" },
+    { label: "Yoga" },
+    { label: "Meditation" },
+    { label: "Photography" },
+    { label: "Gadgets" },
+    { label: "Tech reviews" },
+    { label: "Cars" },
+    { label: "Motorcycles" },
+    { label: "DIY" },
+    { label: "Woodworking" },
+    { label: "Gardening" },
+    { label: "Fashion" },
+    { label: "Makeup" },
+    { label: "Street food" },
+    { label: "Personal Finance" },
+    { label: "Investing" },
+    { label: "Crypto" },
+    { label: "Real Estate" },
+    { label: "Entrepreneurship" },
+    { label: "Marketing" },
+    { label: "Economics" },
+    { label: "Painting" },
+    { label: "Digital Art" },
+    { label: "Graphic Design" },
+    { label: "Architecture" },
+    { label: "Literature" },
+    { label: "Poetry" },
+    { label: "Lo-fi" },
+    { label: "Classical music" },
+    { label: "Jazz" },
+    { label: "Hip hop" },
+    { label: "EDM" },
+    { label: "Acoustic guitar" },
+    { label: "Piano" },
+    { label: "Cover songs" },
+    { label: "Live performances" },
+    { label: "ASMR" },
+    { label: "Pets" },
+    { label: "Dogs" },
+    { label: "Cats" },
+    { label: "Wildlife" },
+    { label: "Nature" },
+    { label: "Interviews" },
+    { label: "Talk shows" },
+    { label: "Recent uploads" },
+    { label: "Watched" },
+    { label: "New to you" }
+];
+
+const CategoryBar = () => {
+    const [isActiveLabel, setIsActiveLabel] = useState("All");
+    return <>
+        <div className="h-14 flex items-center overflow-x-auto">
+                        {categories.map((categorie, index) => {
+                            return <FilterNav
+                            key={index}
+                            label={categorie.label} 
+                            isActiveLabel={isActiveLabel === categorie.label}
+                            onClick={() => setIsActiveLabel(categorie.label)}
+                        />
+                })}       
+        </div>
+    </>
+}
+
+export default CategoryBar;
