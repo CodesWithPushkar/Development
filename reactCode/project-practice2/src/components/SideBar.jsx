@@ -17,10 +17,10 @@ import { MdOutlineHelpOutline } from "react-icons/md";
 import { MdOutlineFeedback } from "react-icons/md";
 import SidebarItem from "../components/Button";
 
-const mainLinks = [
-        { icon: AiFillHome, label: "Home" },
-        { icon: SiYoutubeshorts, label: "Shorts" },
-        { icon: MdOutlineSubscriptions, label: "Subscriptions" }
+    const mainLinks = [
+        { icon: AiFillHome, label: "Home", url: "/" },
+        { icon: SiYoutubeshorts, label: "Shorts", url: "/shorts" },
+        { icon: MdOutlineSubscriptions, label: "Subscriptions", url: "/feed/subscriptions" }
     ];
 
     const youLinks = [
@@ -73,6 +73,7 @@ const Sidebar = ({isSideBarOpen}) => {
                                 key={index}
                                 Icon={link.icon}
                                 label={link.label}
+                                url={link.url}
                                 isSideBarOpen={isSideBarOpen}
                             />)
                         })}

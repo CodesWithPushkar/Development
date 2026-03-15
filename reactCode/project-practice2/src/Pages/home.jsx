@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import VideoCard from "../components/videoCard";
 import CategoryBar from "../components/categoryBar";
 import YoutubeLayout from "../components/YoutubeLayout";
@@ -217,8 +217,6 @@ const Home = () => {
 
 
     return <>
-
-        <YoutubeLayout>
             <CategoryBar />
             <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-3.5">
                     {videoData.map((data, index) => {
@@ -234,7 +232,7 @@ const Home = () => {
                                 />
                     })}
             </div>
-        </YoutubeLayout>
+       
     </>
 }
 export default Home;
